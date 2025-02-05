@@ -1,6 +1,6 @@
-FROM python:3.13.1-bookworm
+FROM python:3.13.1-slim
 EXPOSE 5000
 WORKDIR /code
-ADD . /code
+COPY index.py /code
 RUN python -m pip install flask
 CMD python index.py
